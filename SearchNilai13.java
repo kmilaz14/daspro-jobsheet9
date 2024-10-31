@@ -16,11 +16,16 @@ public class SearchNilai13 {
         System.out.print("Masukkan nilai yang ingin dicari: ");
         int key = sc.nextInt();
 
-        for (int i = 0; i < jmlhNilai; i++){
+        int i=0;
+        while (i < jmlhNilai){
             if (nilaiMhs[i] == key) {
                 System.out.println("Nilai " + key + " ketemu, merupakan nilai mahasiswa ke-" + (i+1));
                 break;
             }
+            i++;
+        }
+        if (i == jmlhNilai) {
+            System.out.println("Nilai yang dicari tidak ditemukan");
         }
     }
 }
